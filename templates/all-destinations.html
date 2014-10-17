@@ -1,0 +1,18 @@
+<div class="container clearfix" ng-controller="ListAllDestinations">
+    <div class="row">
+        <h3>All Destinations</h3>
+
+    </div>
+    <div class="row" ng-repeat="row in destinations.range">
+        <div class="col-md-4" ng-scope ng-repeat="destination in destinations.slice(row, row + 3)">
+            <h2 class="text-center">
+                <a href="#/destination-details/{{destination.id}}">{{destination.name}}</a>
+            </h2>
+            <!--<div class="image-container">
+                <a href="#/destination-details/{{destination.id}}">
+                    <img src="{{destination.imageCover.url}}"/>
+                </a>
+            </div>-->
+        </div>
+    </div>
+</div>

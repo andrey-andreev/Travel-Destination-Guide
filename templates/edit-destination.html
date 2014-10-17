@@ -1,0 +1,58 @@
+<form class="form-horizontal col-md-6" ng-controller="EditDestinationController">
+    <fieldset>
+        <legend>Add destination</legend>
+        <div class="form-group">
+            <label for="edit-dest-name" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="edit-dest-name" placeholder="Name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="edit-dest-city" class="col-lg-2 control-label">City</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="edit-dest-city" placeholder="City">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="edit-dest-country" class="col-lg-2 control-label">Country</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="edit-dest-country" placeholder="Country">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="edit-dest-additional-info" class="col-lg-2 control-label">Destination Additional Information</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="edit-dest-additional-info"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="edit-dest-image" class="col-lg-2 control-label">Destination Cover Image URL</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="edit-dest-image" placeholder="Image URL">
+            </div>
+            <label for="edit-dest-image-additional-info" class="col-lg-2 control-label">Short description of the picture</label>
+            <div class="col-lg-10">
+                <textarea class="form-control" rows="3" id="edit-dest-image-additional-info"></textarea>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="category-select" class="col-lg-2 control-label">Destination Category</label>
+            <div class="col-lg-10">
+                <select class="form-control" id="category-select">
+                    <option ng-repeat="category in categories">{{category}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+    <div class="col-md-6 image-container">
+        <img src="{{destination.imageCover.url}}"/>
+    </div>
+</form>

@@ -1,0 +1,47 @@
+<div class="container ng-scope clearfix" ng-controller="DestinationDetailsController">
+    <div class="row jumbotron">
+        <div class="col-md-6 image-container">
+            <!--<img src="{{destination.imageCover.url}}" alt="{{destination.name}} Image"/>-->
+
+            <div id="image-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!--<ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="{{$index + 1}}" ng-repeat="image in destination.images"></li>
+                </ol>-->
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{{destination.imageCover.url}}" alt="Image of {{destination.name}}">
+                        <div class="carousel-caption">
+                            {{destination.imageCover.additionalInformation}}
+                        </div>
+                    </div>
+                    <div class="item" ng-repeat="image in destination.images">
+                        <img src="{{image.url}}" alt="Image of {{destination.name}}">
+                        <div class="carousel-caption">
+                            {{image.additionalInformation}}
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <span class="left carousel-control" data-target="#image-carousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </span>
+                <span class="right carousel-control" data-target="#image-carousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2><strong>{{destination.name}}</strong></h2>
+            <p><strong>Location:</strong> <span class="pull-right">{{destination.city}}, {{destination.country}}</span></p>
+            <br/>
+            <p class="text-justify"><strong>Additional Information:</strong> <small>{{destination.additionalInformation}}</small></p>
+            <a href="#" class="btn btn-primary">Add picture</a>
+            <a href="#/edit-destination/{{destination.id}}" class="btn btn-primary pull-right">Edit</a>
+        </div>
+    </div>
+</div>

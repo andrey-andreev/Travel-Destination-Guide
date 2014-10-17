@@ -1,0 +1,47 @@
+<div class="bs-component clearfix" ng-controller="HomeController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 lead">
+                <strong>Latest Destinations</strong>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="btn btn-default pull-right btn-primary">See all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" ng-repeat="destination in destinations | limitTo:quantity">
+                <h3><a href="#/destination-details/{{destination.id}}">{{destination.name}}</a></h3>
+                <div class="image-container">
+                    <a href="#/destination-details/{{destination.id}}">
+                        <img src="{{destination.imageCover.url}}"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 lead">
+                <strong>Latest Cities</strong>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="btn btn-default pull-right btn-primary">See all</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <h3><a href="#">Name</a></h3>
+                <img src=""/>
+            </div>
+            <div class="col-md-4">
+                <h3><a href="#">Name</a></h3>
+                <img src=""/>
+            </div>
+            <div class="col-md-4">
+                <h3><a href="#">Name</a></h3>
+                <img src=""/>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Travel Destination Guide</title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body ng-app="travelDestinationGuideApp" ng-controller="PageController" ng-cloak>
+
+<div class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand">Destinations</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li><a href="#/edit-destination">Add Destinations</a></li>
+                <li><a href="#">All Counties</a></li>
+                <li><a href="#">All Cities</a></li>
+                <li><a href="#/all-destinations">All Destinations</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container" ng-view></div>
+
+<hr/>
+<footer class="text-center">
+    <small>
+        <strong>Author:</strong><a href="https://github.com/bigrookie">{{author}}</a>,
+        <strong>Copyright &copy;</strong> 2014 <a href="https://github.com/bigrookie">{{author}}</a>
+    </small>
+    <br/>
+    <small>
+        <strong>Open Source Project</strong> powered by: <a href="https://angularjs.org/">AngularJS</a> and
+        <a href="http://getbootstrap.com/">Twitter Bootstrap</a></small>
+    <br/>
+</footer>
+<hr/>
+
+<script src="libs/jquery-2.1.1.js"></script>
+<script src="libs/bootstrap.min.js"></script>
+<script src="libs/angular-1.2.26/angular.js"></script>
+<script src="libs/angular-1.2.26/angular-resource.js"></script>
+<script src="libs/angular-1.2.26/angular-route.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/PageController.js"></script>
+<script src="js/controllers/HomeController.js"></script>
+<script src="js/controllers/EditDestinationController.js"></script>
+<script src="js/controllers/DestinationDetailsController.js"></script>
+<script src="js/controllers/ListAllDestinations.js"></script>
+<script src="js/services/destinationData.js"></script>
+</body>
+</html>
